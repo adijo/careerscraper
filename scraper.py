@@ -56,12 +56,6 @@ class companyDownloader(object):
             self.file.write("\n\n\n\n")       
             
             
-    def span_to_formattedURL(self,span):
-        start = span.find("href\=")
-        counter = start + 1
-        while span[counter] != '"':
-            counter += 1
-        return "http://www.careercup.com/" + span[start:counter+1]
         
     def driver_method(self):
         list_of_urls = self.page_scraper(self.final_url)
